@@ -18,7 +18,6 @@ exports.login = async (req, res, next) => {
       expiresIn: process.env.JWT_EXPIRES_IN,
     },
   );
-
   const refreshToken = jwt.sign(
     { id: user._id },
     process.env.REFRESH_JWT_SECRET,
